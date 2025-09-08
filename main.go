@@ -1,10 +1,10 @@
 package main
 
-import (
-	"fmt"
+import "github.com/freneklopez/aprendiendo_go/ciclos"
 
-	"github.com/freneklopez/aprendiendo_go/funciones"
-)
+/*"fmt"
+
+"github.com/freneklopez/aprendiendo_go/funciones"*/
 
 // "github.com/freneklopez/aprendiendo_go/areas"
 // "github.com/freneklopez/aprendiendo_go/areas"
@@ -25,7 +25,7 @@ func main() {
 	//areas.Circulo()
 	//complejos.Complex()
 	//print.Paquete()
-	funciones.NormalFuncion("Erik hola")
+	/*funciones.NormalFuncion("Erik hola")
 
 	funciones.TripleArgumen(1, 2, "Texto")
 
@@ -33,6 +33,8 @@ func main() {
 	fmt.Println("value", value)
 
 	value1, _ := funciones.DoubleReturn(5)
-	fmt.Println("Value1 ", value1)
+	fmt.Println("Value1 ", value1)*/
+
+	ciclos.CicloFor()
 
 }
