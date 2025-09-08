@@ -1,6 +1,10 @@
 package main
 
-import "github.com/freneklopez/aprendiendo_go/ciclos"
+import (
+	"fmt"
+
+	"github.com/freneklopez/aprendiendo_go/ciclos"
+)
 
 /*"fmt"
 
@@ -36,5 +40,6 @@ func main() {
 	fmt.Println("Value1 ", value1)*/
 
 	ciclos.CicloFor()
+	fmt.Println("Hello")
 
 }
