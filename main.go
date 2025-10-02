@@ -2,44 +2,28 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/freneklopez/aprendiendo_go/ciclos"
+	"sync"
+	"time"
 )
 
-/*"fmt"
-
-"github.com/freneklopez/aprendiendo_go/funciones"*/
-
-// "github.com/freneklopez/aprendiendo_go/areas"
-// "github.com/freneklopez/aprendiendo_go/areas"
-// "github.com/freneklopez/aprendiendo_go/operadores"
-// "github.com/freneklopez/aprendiendo_go/hello"
-// "github.com/freneklopez/aprendiendo_go/operadores"
-// "github.com/freneklopez/aprendiendo_go/complejos"
-// "github.com/freneklopez/aprendiendo_go/print"
+func say(text string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	fmt.Println(text)
+}
 
 func main() {
-	//hello.HolaMundo()
-	//varConstValue.Constantes()
-	//varConstValue.Variables()
-	//varConstValue.ZeroValue()
-	//operadores.Operadores()
-	//areas.Rectangulos()
-	//areas.Rectangulos()
-	//areas.Circulo()
-	//complejos.Complex()
-	//print.Paquete()
-	/*funciones.NormalFuncion("Erik hola")
+	var wg sync.WaitGroup
 
-	funciones.TripleArgumen(1, 2, "Texto")
-
-	value := funciones.ReturnVAlue(5)
-	fmt.Println("value", value)
-
-	value1, _ := funciones.DoubleReturn(5)
-	fmt.Println("Value1 ", value1)*/
-
-	ciclos.CicloFor()
 	fmt.Println("Hello")
+	wg.Add(1)
+
+	go say("world", &wg)
+
+	wg.Wait()
+	go func(text string) {
+		fmt.Println(text)
+	}("Adios")
+
+	time.Sleep(time.Second * 1)
 
 }

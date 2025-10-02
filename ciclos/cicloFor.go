@@ -1,11 +1,18 @@
 package ciclos
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"strconv"
+)
 
-//For es un codigo que repite el proceso asta que se cumple la condicion.
+// For es un codigo que repite el proceso asta que se cumple la condicion.
 func CicloFor() {
-	for i := 10; i >= 0; i-- {
-		fmt.Println(i)
-
+	//Convertir texto a numero
+	value, err := strconv.Atoi("50")
+	if err != nil {
+		log.Fatal(err)
 	}
+	fmt.Println("Value", value)
+
 }
